@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,23 +9,40 @@ const router = createRouter({
       component: () => import("@/views/Loginview.vue"),
     },
     {
-      path: "/daftar",
-      name: "daftar",
-      component: () => import("@/views/Daftarview.vue"),
+      path: "/dashboard",
+      name: "dashboard",
+      component: () => import("@/views/Dashboardview.vue"),
     },
     {
-      path: "/about",
-      name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import("../views/AboutView.vue"),
+      path: "/peminjamanberkas",
+      name: "peminjamanberkas",
+      component: () => import("@/views/PeminjamanBerkasview.vue"),
+    },
+   {
+      path: "/entridatapeminjaman",
+      name: "entridatapeminjaman",
+      component: () => import("@/views/EntriDataPeminjamanview.vue"),
     },
     {
-      path: "/about",
-      name: "about",
+      path: "/berkastidakditemukan",
+      name: "berkastidakditemukan",
+      component: () => import("@/views/BerkasTidakDitemukanview.vue"),
+    },
+    {
+      path: "/entridatatidakditemukan",
+      name: "entridatatidakditemukan",
+      component: () => import("@/views/EntriDataTidakDitemukanview.vue"),
+    },
+    {
+      path: "/pengaturanakun",
+      name: "pengaturanakun",
+      component: () => import("@/views/PengaturanAkunview.vue"),
+    },
 
-      component: () => import("../views/AboutView.vue"),
+    {
+      path: "/reg",
+      name: "reg",
+      component: () => import("@/views/Registrasi.vue"),
     },
   ],
 });
